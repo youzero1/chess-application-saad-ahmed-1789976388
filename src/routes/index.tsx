@@ -28,7 +28,7 @@ function HomePage() {
     <div className="flex min-h-screen flex-col items-center px-4 py-6 sm:py-8">
       <header className="mb-6 text-center">
         <h1 className="font-display text-4xl font-bold tracking-wide text-accent drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] sm:text-5xl">
-          Ocean Chess
+          Saad Chess
         </h1>
         <p className="mt-1 text-sm text-teal-100/60">
           You play White against the computer
