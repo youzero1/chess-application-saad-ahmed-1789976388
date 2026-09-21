@@ -1,5 +1,5 @@
 ---
-status: pending
+status: implemented
 title: Chess Application — Play vs AI with Wooden Classic Look
 ---
 

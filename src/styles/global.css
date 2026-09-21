@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@theme {
+  /* Wooden palette */
+  --color-wood-light: #eed9b4;
+  --color-wood-dark: #9a6a3e;
+  --color-frame: #4a2c17;
+  --color-panel: #2e1c0e;
+  --color-panel-light: #412712;
+  --color-gold: #d9a441;
+  --color-cream: #f5e9d0;
+
+  /* Elegant serif for headings */
+  --font-display: "Playfair Display", "Georgia", serif;
+}
+
+/* Wood-grain texture built from layered CSS gradients (no image assets). */
+.wood-grain {
+  background-color: #5a3a22;
+  background-image:
+    repeating-linear-gradient(93deg, rgba(0, 0, 0, 0.14) 0 2px, transparent 2px 8px),
+    repeating-linear-gradient(87deg, rgba(255, 235, 200, 0.05) 0 1px, transparent 1px 11px),
+    linear-gradient(155deg, #7c5230 0%, #55341c 55%, #6d4527 100%);
+}
+
+/* Subtler grain for panel surfaces. */
+.wood-grain-panel {
+  background-color: #33200f;
+  background-image:
+    repeating-linear-gradient(91deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 9px),
+    linear-gradient(170deg, #40260f 0%, #2a1a0b 60%, #38220f 100%);
+}
