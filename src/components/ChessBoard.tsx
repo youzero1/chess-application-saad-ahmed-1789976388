@@ -17,7 +17,7 @@ const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
 /**
  * The 8×8 board (a8 top-left, White at the bottom — fixed orientation)
- * inside a padded wooden frame with coordinate labels along the edges.
+ * inside a padded slate-teal frame with coordinate labels along the edges.
  */
 export function ChessBoard({
   position,
@@ -41,7 +41,7 @@ export function ChessBoard({
       const target = targets.get(idx);
       const isLastMove = lastMove !== null && (lastMove.from === idx || lastMove.to === idx);
       const isCheck = checkSquare === idx;
-      const labelColor = light ? 'text-[#7a5230]' : 'text-[#e8d3a8]';
+      const labelColor = light ? 'text-[#0d4f4a]' : 'text-[#c9efe4]';
 
       cells.push(
         <button
@@ -50,7 +50,7 @@ export function ChessBoard({
           onClick={() => onSquareClick(idx)}
           className={[
             'relative flex items-center justify-center p-0 text-[10.5cqi] leading-none focus:outline-none',
-            light ? 'bg-wood-light' : 'bg-wood-dark',
+            light ? 'bg-sea-light' : 'bg-sea-dark',
             interactive && piece && piece.color === 'white' ? 'cursor-pointer' : 'cursor-default',
           ].join(' ')}
         >
@@ -71,24 +71,24 @@ export function ChessBoard({
           )}
 
           {/* last-move tint */}
-          {isLastMove && <span className="pointer-events-none absolute inset-0 bg-amber-300/35" />}
+          {isLastMove && <span className="pointer-events-none absolute inset-0 bg-teal-300/35" />}
 
           {/* check glow on the king's square */}
           {isCheck && (
-            <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(220,50,40,0.8)_0%,rgba(220,50,40,0.35)_55%,transparent_75%)]" />
+            <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(255,95,72,0.85)_0%,rgba(255,95,72,0.4)_55%,transparent_75%)]" />
           )}
 
           {/* selected square outline */}
           {isSelected && (
-            <span className="pointer-events-none absolute inset-0 z-10 shadow-[inset_0_0_0_4px_rgba(217,164,65,0.95),inset_0_0_12px_rgba(217,164,65,0.5)]" />
+            <span className="pointer-events-none absolute inset-0 z-10 shadow-[inset_0_0_0_4px_rgba(45,212,191,0.95),inset_0_0_12px_rgba(45,212,191,0.5)]" />
           )}
 
           {/* legal-move markers: dot on empty squares, ring on captures */}
           {target && !target.isCapture && (
-            <span className="pointer-events-none absolute z-10 h-[26%] w-[26%] rounded-full bg-black/25" />
+            <span className="pointer-events-none absolute z-10 h-[26%] w-[26%] rounded-full bg-[#062a2e]/30" />
           )}
           {target && target.isCapture && (
-            <span className="pointer-events-none absolute inset-[3%] z-10 rounded-full border-[3px] border-black/35" />
+            <span className="pointer-events-none absolute inset-[3%] z-10 rounded-full border-[3px] border-[#062a2e]/45" />
           )}
 
           {piece && <ChessPiece piece={piece} className="relative z-10" />}
@@ -98,7 +98,7 @@ export function ChessBoard({
   }
 
   return (
-    <div className="wood-grain rounded-xl p-2.5 shadow-[0_18px_50px_rgba(0,0,0,0.6)] ring-1 ring-black/50 sm:p-3.5">
+    <div className="ocean-grain rounded-xl p-2.5 shadow-[0_18px_50px_rgba(0,0,0,0.6)] ring-1 ring-black/50 sm:p-3.5">
       <div className="@container grid aspect-square w-full grid-cols-8 grid-rows-8 overflow-hidden rounded-md shadow-[inset_0_0_20px_rgba(0,0,0,0.45)]">
         {cells}
       </div>

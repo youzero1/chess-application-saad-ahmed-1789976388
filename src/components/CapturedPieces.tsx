@@ -12,7 +12,7 @@ interface CapturedPiecesProps {
 
 function PieceRow({ pieces, sizeClass }: { pieces: Piece[]; sizeClass: string }) {
   if (pieces.length === 0) {
-    return <span className="text-xs text-amber-100/40 italic">none</span>;
+    return <span className="text-xs text-teal-100/40 italic">none</span>;
   }
   return (
     <span className="flex flex-wrap items-center">
@@ -29,14 +29,14 @@ export function CapturedPieces({
   materialDiff,
 }: CapturedPiecesProps) {
   return (
-    <div className="wood-grain-panel rounded-xl p-4 shadow-lg ring-1 ring-gold/20">
-      <h2 className="font-display mb-3 text-sm font-semibold tracking-widest text-gold uppercase">
+    <div className="ocean-grain-panel rounded-xl p-4 shadow-lg ring-1 ring-accent/20">
+      <h2 className="font-display mb-3 text-sm font-semibold tracking-widest text-accent uppercase">
         Captured Pieces
       </h2>
       <div className="flex items-center justify-between gap-2">
-        <span className="text-xs text-amber-100/60">You captured</span>
+        <span className="text-xs text-teal-100/60">You captured</span>
         {materialDiff > 0 && (
-          <span className="rounded-full bg-gold px-2 py-0.5 text-xs font-bold text-[#2a1808]">
+          <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-[#062a2e]">
             +{materialDiff}
           </span>
         )}
@@ -45,9 +45,9 @@ export function CapturedPieces({
         <PieceRow pieces={capturedByWhite} sizeClass="text-2xl" />
       </div>
       <div className="flex items-center justify-between gap-2">
-        <span className="text-xs text-amber-100/60">Computer captured</span>
+        <span className="text-xs text-teal-100/60">Computer captured</span>
         {materialDiff < 0 && (
-          <span className="rounded-full bg-black/40 px-2 py-0.5 text-xs font-bold text-amber-100 ring-1 ring-gold/30">
+          <span className="rounded-full bg-black/40 px-2 py-0.5 text-xs font-bold text-teal-100 ring-1 ring-accent/30">
             +{-materialDiff}
           </span>
         )}

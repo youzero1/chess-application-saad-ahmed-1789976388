@@ -27,10 +27,10 @@ function HomePage() {
   return (
     <div className="flex min-h-screen flex-col items-center px-4 py-6 sm:py-8">
       <header className="mb-6 text-center">
-        <h1 className="font-display text-4xl font-bold tracking-wide text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] sm:text-5xl">
-          Wooden Chess
+        <h1 className="font-display text-4xl font-bold tracking-wide text-accent drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] sm:text-5xl">
+          Ocean Chess
         </h1>
-        <p className="mt-1 text-sm text-amber-100/60">
+        <p className="mt-1 text-sm text-teal-100/60">
           You play White against the computer
         </p>
       </header>
@@ -62,7 +62,7 @@ function HomePage() {
         </div>
 
         <aside className="flex w-full max-w-[min(92vw,36rem)] flex-col gap-4 lg:w-80">
-          <div className="rounded-xl bg-panel/90 px-4 py-3 text-center text-sm font-medium text-amber-100/90 shadow-lg ring-1 ring-gold/20">
+          <div className="rounded-xl bg-panel/90 px-4 py-3 text-center text-sm font-medium text-teal-100/90 shadow-lg ring-1 ring-accent/20">
             {statusText}
           </div>
 

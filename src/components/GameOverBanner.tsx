@@ -22,14 +22,14 @@ export function GameOverBanner({ status, winner, onPlayAgain }: GameOverBannerPr
 
   return (
     <div className="absolute inset-0 z-30 flex items-center justify-center rounded-xl bg-black/55 backdrop-blur-[1px]">
-      <div className="wood-grain-panel mx-4 rounded-xl px-8 py-6 text-center shadow-2xl ring-1 ring-gold/40">
-        <p className="font-display text-2xl font-bold text-gold drop-shadow sm:text-3xl">
+      <div className="ocean-grain-panel mx-4 rounded-xl px-8 py-6 text-center shadow-2xl ring-1 ring-accent/40">
+        <p className="font-display text-2xl font-bold text-accent drop-shadow sm:text-3xl">
           {message}
         </p>
         <button
           type="button"
           onClick={onPlayAgain}
-          className="mt-5 rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-[#2a1808] shadow transition-colors hover:bg-[#e5b455]"
+          className="mt-5 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-[#062a2e] shadow transition-colors hover:bg-[#5eead4]"
         >
           Play Again
         </button>

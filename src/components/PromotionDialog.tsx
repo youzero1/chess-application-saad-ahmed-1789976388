@@ -16,10 +16,10 @@ export function PromotionDialog({ onSelect, onCancel }: PromotionDialogProps) {
       onClick={onCancel}
     >
       <div
-        className="wood-grain-panel rounded-xl p-5 shadow-2xl ring-1 ring-gold/40"
+        className="ocean-grain-panel rounded-xl p-5 shadow-2xl ring-1 ring-accent/40"
         onClick={(e) => e.stopPropagation()}
       >
-        <p className="font-display mb-3 text-center text-sm font-semibold tracking-widest text-gold uppercase">
+        <p className="font-display mb-3 text-center text-sm font-semibold tracking-widest text-accent uppercase">
           Promote to
         </p>
         <div className="flex gap-3">
@@ -28,7 +28,7 @@ export function PromotionDialog({ onSelect, onCancel }: PromotionDialogProps) {
               key={type}
               type="button"
               onClick={() => onSelect(type)}
-              className="flex h-16 w-16 items-center justify-center rounded-lg bg-wood-light/90 shadow transition-transform hover:scale-110 hover:bg-wood-light"
+              className="flex h-16 w-16 items-center justify-center rounded-lg bg-sea-light/90 shadow transition-transform hover:scale-110 hover:bg-sea-light"
               aria-label={`Promote to ${type}`}
             >
               <ChessPiece piece={{ color: 'white', type }} className="text-4xl" />

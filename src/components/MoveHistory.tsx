@@ -39,8 +39,8 @@ export function MoveHistory({ history }: MoveHistoryProps) {
       className={[
         'rounded px-2 py-0.5 text-sm',
         index === latestIndex
-          ? 'bg-gold/25 font-semibold text-amber-50'
-          : 'text-amber-100/80',
+          ? 'bg-accent/25 font-semibold text-teal-50'
+          : 'text-teal-100/80',
       ].join(' ')}
     >
       {label ?? ''}
@@ -48,20 +48,20 @@ export function MoveHistory({ history }: MoveHistoryProps) {
   );
 
   return (
-    <div className="wood-grain-panel rounded-xl p-4 shadow-lg ring-1 ring-gold/20">
-      <h2 className="font-display mb-3 text-sm font-semibold tracking-widest text-gold uppercase">
+    <div className="ocean-grain-panel rounded-xl p-4 shadow-lg ring-1 ring-accent/20">
+      <h2 className="font-display mb-3 text-sm font-semibold tracking-widest text-accent uppercase">
         Moves
       </h2>
       <div ref={scrollRef} className="max-h-56 overflow-y-auto pr-1">
         {rounds.length === 0 ? (
-          <p className="text-sm text-amber-100/40 italic">
+          <p className="text-sm text-teal-100/40 italic">
             No moves yet — White to play.
           </p>
         ) : (
           <div className="grid grid-cols-[2rem_1fr_1fr] items-center gap-y-0.5">
             {rounds.map((round) => (
               <div key={round.number} className="contents">
-                <span className="py-0.5 text-sm text-amber-100/50">{round.number}.</span>
+                <span className="py-0.5 text-sm text-teal-100/50">{round.number}.</span>
                 {moveCell(round.white, round.whiteIndex)}
                 {moveCell(round.black, round.blackIndex)}
               </div>
